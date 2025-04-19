@@ -4,8 +4,8 @@ from Crypto.Cipher import AES
 from Crypto.Random import get_random_bytes
 import base64
 
-CORS(app)
 app = Flask(__name__)
+CORS(app)
 
 # AES Encryption function
 def encrypt_data(data, secret_key):
