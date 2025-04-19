@@ -1,89 +1,101 @@
-/* Center the layout and set the background to black */
 body {
-  background-color: black;
-  color: white;
-  font-family: 'Arial', sans-serif;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+  color: #222222;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-wrapper {
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  margin: 0;
+  padding: 2rem 1rem;
 }
 
 .app-container {
-  max-width: 900px;
   width: 100%;
+  max-width: 800px;
   padding: 2rem;
+  background-color: #ffffff;
+  border: 2px solid #ff0000;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.app-container:hover {
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.8);
+  border-color: #ff0000;
+}
+
+h1, h2, h3 {
+  color: black;
   text-align: center;
-}
-
-h1, h2 {
-  color: white;
-}
-
-h2 {
-  margin-top: 20px;
-  font-size: 24px;
-}
-
-/* Style for the form containers */
-.form-container {
-  background-color: #333;
-  padding: 20px;
-  margin: 20px 0;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
 }
 
 textarea, input {
   width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border-radius: 5px;
-  border: 1px solid #ddd;
-  background-color: #444;
-  color: white;
+  background-color: #ffffff;
+  color: #222222;
+  border: 1px solid #ff0000;
+  border-radius: 8px;
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  resize: vertical;
+  font-size: 1rem;
+  transition: border 0.3s ease;
 }
 
-textarea:focus, input:focus {
+textarea:hover,
+input:hover,
+textarea:focus,
+input:focus {
+  border-color: #ff0000;
   outline: none;
-  border-color: #61dafb;
+  box-shadow: 0 0 8px rgba(255, 0, 0, 0.4);
+}
+
+textarea[readonly], input[readonly] {
+  background-color: #f4f4f4;
 }
 
 button {
-  background-color: #61dafb;
-  color: white;
-  border: none;
-  padding: 12px 24px;
-  border-radius: 5px;
-  font-size: 16px;
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  background-color: #ffffff;
+  color: #ff0000;
+  border: 2px solid #ff0000;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin-top: 10px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 button:hover {
-  background-color: #21a1f1;
+  background-color: #ff0000;
+  color: #ffffff;
 }
 
-button:active {
-  background-color: #1e90db;
+.form-container {
+  margin-bottom: 2rem;
 }
 
-button:focus {
-  outline: none;
+.output {
+  margin-top: 1rem;
+  color: #222222;
 }
 
-.output textarea {
-  margin-top: 10px;
-  background-color: #222;
-}
-
-.output h3 {
-  margin-top: 20px;
-  color: white;
-}
-
-.read-the-docs {
-  color: #888;
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #fff;
+  color: #ff0000;
+  font-size: 0.9rem;
+  border-top: 1px solid #ff0000;
 }
