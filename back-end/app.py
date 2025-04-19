@@ -1,8 +1,10 @@
+from flask_cors import CORS
 from flask import Flask, request, jsonify
 from Crypto.Cipher import AES
 from Crypto.Random import get_random_bytes
 import base64
 
+CORS(app)
 app = Flask(__name__)
 
 # AES Encryption function
